@@ -1,0 +1,83 @@
+.bill-enter{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.bill-enter form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+  background-color: rgb(8, 56, 83);
+  padding: 2rem;
+  border: 2px solid black;
+  box-shadow:  2px 3px 3px 2px rgb(0, 0, 0);
+}
+.bill-enter form input{
+  background-color: rgb(242, 245, 64);
+  color: black;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 7rem;
+}
+::placeholder{
+  color: rgb(0, 0, 0);
+  opacity: 0.8;
+}
+
+.bill-enter form button{
+  padding: 0.5rem;
+  width: 100px;
+  margin: 8rem 8rem;
+  margin-left: 29rem;
+  background-color: rgb(242, 245, 64);
+  border-radius: 7px;
+  font-weight: bold;
+}
+.click{
+  display: flex;
+  justify-content: space-between;
+}
+.click .rightButton button{
+  margin: 8rem 8rem;
+  margin-right: 29rem;
+}
+.error p{
+  margin-left: -3.5rem;
+  padding-top: 0.5rem;
+  font-size: 1.1rem;
+  color:rgb(252, 0, 0);
+
+}
+.bill-enter form h3{
+  font-size: 1.5rem;
+  color: aliceblue;
+  font-weight: normal;
+}
+@media screen and (max-width: 480px) {
+  .bill-enter form{
+    width: 320px;
+    padding:0 0.5rem;
+  }
+  .bill-enter form button{
+    margin: 5rem 5rem;
+    margin-left: 5rem;
+  }
+  .bill-enter form h3{
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    margin-bottom: -3rem;
+  }
+  .click{
+    justify-content: center;
+  }
+  .click .rightButton button{
+    margin-right: 5rem;
+    margin-top: 5rem;
+    margin-left: 1.8rem;
+    
+  }
+}

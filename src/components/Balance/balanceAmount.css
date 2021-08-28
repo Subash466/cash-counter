@@ -1,0 +1,90 @@
+.balance{
+  display: flex;
+  justify-content: center;
+}
+
+.balance-container{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+.balance h1{
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+
+}
+.balance .inputGiven{
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+  white-space: pre;
+}
+.balance .inputGiven p{
+  margin: 0 2rem;
+  font-size: 1.2rem;
+  color: rgb(7, 41, 73);
+  font-weight: bold;
+}
+.balance .inputGiven p span{
+  color: rgb(255, 3, 3);
+}
+.balance-details .finish{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+.balance-details button{
+  font-size: 1.2rem;
+  padding:0.5rem 2rem;
+  background-color: rgb(242, 245, 64);
+  color: rgb(0, 0, 0);
+  cursor:pointer;
+  font-weight: bold;
+  border-radius: 7px;
+}
+
+.balance-details table{
+  background-color: rgb(8, 56, 83);
+  border: 2px solid rgb(37, 37, 37);
+  width: 500px;
+  border-radius: 10px;
+  padding: 3rem;
+}
+table, th, td {
+  border: 1px solid black;
+  padding: 0.5rem 2rem;
+  font-size: 1.3rem;
+  color:rgb(242, 245, 64) ;
+  cursor: pointer;
+}
+table td{
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+tr td:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+table { empty-cells: hide; }
+
+@media screen and (max-width: 480px){
+  .balance-details table{
+    width: 305px;
+    padding: 1rem;
+  }
+  .balance h1{
+    font-size: 1.5rem;
+  }
+  
+  .balance .inputGiven p{
+    margin: 0 0.6rem;
+    color: rgb(228, 0, 0);
+    font-size: 1rem;
+  }
+  .balance .inputGiven p span{
+    color: rgb(0, 0, 0);
+  }
+}

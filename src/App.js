@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import {BrowserRouter, Route, Switch} from "react-router-dom"
 import './App.css';
+import BillAmount from './components/Bill_Amount/BillAmount';
+import { useState } from "react";
+import GivenAmount from "./components/Given/GivenAmount";
+import BalanceAmount from "./components/Balance/BalanceAmount";
+import Navbar from "./components/Header/Navbar";
+
 
 function App() {
+  //state send as props
+  const [bill,setBill]=useState(0);
+  const [given,setGiven]=useState(0);
+  
+  //function to update setState
+  const billAmount=(x)=>{
+    setBill(x)
+  }
+
+  const givenAmount=(x)=>{
+    setGiven(x)
+  }
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Navbar /> 
+    <BrowserRouter>
+    <Switch>
+    <Route path="/"  exact component={()=><BillAmount billAmount={billAmount}/>} />
+    <Route path="/user" component={()=><GivenAmount  givenAmount={givenAmount}/>}/>
+    <Route path="/balance" component={()=><BalanceAmount bill={bill} given={given}/>}/>
+    </Switch>
+    </BrowserRouter>
     </div>
   );
 }

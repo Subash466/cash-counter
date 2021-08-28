@@ -1,0 +1,15 @@
+.navbar h1{
+  text-align: center;
+  font-size:2.3rem;
+  background-color: black;
+  color: rgb(189, 10, 10);
+  width: 100%;
+  padding: 1rem;
+  text-transform:capitalize;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 480px) {
+  .navbar h1{
+    font-size: 1.3rem;
+  }
+}
